@@ -1,0 +1,425 @@
+{
+"general": {
+"version": "15"
+},
+"project": {
+"game": {
+"name": "A_Rockets_Nexus",
+"version": "1.0.0",
+"width": "1820",
+"height": "1024",
+"font": "Cartoon",
+"lightAmbient": "255",
+"balloonImageMargin": "10,10,63,33",
+"balloonTextMargin": "10,10,11,36",
+"choiceMargin": "10,150,10,10",
+"scripts": {
+"init": "// this script is called when a new game is started or when a previous game is loaded\r\n// you can set here your variables that will be initialized even for old savegames"
+},
+"languages": {
+"english": "1",
+"os": "1",
+"native": "English",
+"default": "English"
+},
+"builds": [
+{
+"platform": "WINDOWS",
+"name": "windows"
+},
+{
+"platform": "WINDOWS",
+"name": "play_windows"
+},
+{
+"platform": "WEB",
+"name": "play_web",
+"distribution": "Local"
+}
+]
+},
+"palette": {
+"Blue": 16744448,
+"Brown": 2121888,
+"Cyan": 15266376,
+"DarkGreen": 32768,
+"Gold": 2138336,
+"Gray": 10398381,
+"Green": 5760599,
+"Magenta": 15357406,
+"Maroon": 160,
+"Orange": 33023,
+"Pink": 12632319,
+"Purple": 9519498,
+"Red": 3937500,
+"Silver": 12632256,
+"Yellow": 6356991,
+"White": 16777215
+},
+"layout": {
+"autosave": {
+"active": true,
+"width": 128,
+"height": 128
+},
+"bag": {
+"active": true,
+"x": 1688,
+"width": 128,
+"height": 128,
+"horz": 2,
+"rclick": true
+},
+"detach": {
+"y": 128,
+"width": 128,
+"height": 128,
+"horz": 2,
+"bag": "Enabled"
+},
+"items": {
+"active": true,
+"y": 880,
+"width": 1820,
+"height": 128,
+"horz": 3,
+"vert": 2,
+"bag": "Enabled"
+},
+"legend": {
+"active": true,
+"x": 160,
+"y": 16,
+"width": 1500,
+"height": 32,
+"horz": 3,
+"align": "Top"
+},
+"magnify": {
+"active": true,
+"width": 400,
+"height": 400,
+"zoom": 200
+},
+"menu": {
+"active": true,
+"x": 1688,
+"y": 128,
+"width": 128,
+"height": 128,
+"horz": 2,
+"bag": "Enabled"
+},
+"players": {
+"x": 1688,
+"y": 256,
+"width": 128,
+"height": 512,
+"vert": 3,
+"bag": "Enabled"
+},
+"shutup": {
+"active": true,
+"x": 1688,
+"width": 128,
+"height": 128,
+"horz": 2
+}
+}
+},
+"scenario": {
+"board": {
+"nextid": 8,
+"boxes": [
+{
+"type": 257,
+"id": 1,
+"name": "start",
+"y": 8,
+"plugs": [
+{
+"id": 2,
+"type": 3,
+"trgs": [
+6
+]
+}
+],
+"exit": "// Assign an object to the player\r\ncontrol P_HERO O_HERO\r\n\r\n// Change the current player\r\nswitch P_HERO\r\n\r\n// Change the current scene\r\njump S_HOME"
+},
+{
+"type": 260,
+"id": 3,
+"name": "end",
+"x": 200,
+"y": 8,
+"plugs": [
+{
+"id": 4,
+"type": 2
+}
+]
+},
+{
+"type": 256,
+"id": 5,
+"name": "#puzzle",
+"x": 96,
+"y": 8,
+"plugs": [
+{
+"id": 6,
+"type": 2
+},
+{
+"id": 7,
+"type": 3,
+"trgs": [
+4
+]
+}
+]
+}
+]
+}
+},
+"roles": [
+{
+"sid": 2,
+"uid": "R_HOME",
+"graph": {
+"board": {
+"nextid": 3,
+"boxes": [
+{
+"type": 257,
+"id": 1,
+"plugs": [
+{
+"id": 2,
+"type": 3
+}
+]
+}
+]
+}
+}
+}
+],
+"scenes": [
+{
+"scene": {
+"lightAmbient": -1,
+"lightBlur": -1,
+"backOpacityMin": 100,
+"backOpacityMax": 100,
+"backOpacitySpeed": 100,
+"layers": {
+"MA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+}
+},
+"nextID": 2,
+"role": "R_HOME"
+},
+"objects": [
+{
+"uid": "O_HERO",
+"id": 1,
+"x": 910,
+"y": 512,
+"parallax": 100,
+"lightAmbient": 255,
+"lightDiffuse": 16777215,
+"lightAngle": 30,
+"lightDist": -1
+}
+],
+"sid": 1,
+"uid": "S_HOME"
+}
+],
+"objects": [
+{
+"object": {
+"bbox": true,
+"maxScale": 100
+},
+"anims": [
+{
+"name": "STOP",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+}
+],
+"sid": 3,
+"uid": "O_HERO"
+}
+],
+"players": [
+{
+"sid": 4,
+"uid": "P_HERO",
+"player": {
+"scrollSmooth": 50,
+"zoomSmooth": 50,
+"pathColor": -1
+}
+}
+],
+"meta": {
+"nextAssetID": 5
+}
+}
