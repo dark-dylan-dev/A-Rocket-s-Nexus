@@ -129,19 +129,63 @@
 },
 "scenario": {
 "board": {
-"nextid": 8,
+"nextid": 83,
+"x": 73,
+"sections": [
+{
+"name": "Intro / Plot",
+"desc": "Helps the player to discover the rocket's rooms and NPCs",
+"width": 240,
+"diagram": {
+"board": {
+"nextid": 1
+}
+}
+},
+{
+"name": "LAB PART",
+"desc": "A part full of enigmas to craft a special element in the end",
+"width": 304,
+"diagram": {
+"board": {
+"nextid": 1
+}
+}
+},
+{
+"name": "TRAVELERS PART",
+"desc": "Learn magic and music to get more informations on this strange situation",
+"width": 384,
+"diagram": {
+"board": {
+"nextid": 1
+}
+}
+},
+{
+"name": "CABIN / OFFICERS PART",
+"desc": "Solve the mystery, this feeling you had from the beginning is finally explained",
+"width": 600,
+"diagram": {
+"board": {
+"nextid": 1
+}
+}
+}
+],
 "boxes": [
 {
 "type": 257,
 "id": 1,
 "name": "start",
-"y": 8,
+"x": 40,
+"y": 424,
 "plugs": [
 {
 "id": 2,
 "type": 3,
 "trgs": [
-6
+9
 ]
 }
 ],
@@ -151,8 +195,8 @@
 "type": 260,
 "id": 3,
 "name": "end",
-"x": 200,
-"y": 8,
+"x": 1556,
+"y": 424,
 "plugs": [
 {
 "id": 4,
@@ -162,17 +206,332 @@
 },
 {
 "type": 256,
-"id": 5,
-"name": "#puzzle",
-"x": 96,
-"y": 8,
+"id": 8,
+"name": "#Get_lab_key",
+"value": "SEARCH",
+"x": 144,
+"y": 424,
 "plugs": [
 {
-"id": 6,
+"id": 9,
 "type": 2
 },
 {
-"id": 7,
+"id": 10,
+"type": 3,
+"trgs": [
+27,
+21,
+18
+]
+}
+]
+},
+{
+"type": 256,
+"id": 17,
+"name": "#Get_acid",
+"value": "HARD",
+"x": 304,
+"y": 512,
+"plugs": [
+{
+"id": 18,
+"type": 2
+},
+{
+"id": 19,
+"type": 3,
+"trgs": [
+33
+]
+}
+]
+},
+{
+"type": 256,
+"id": 20,
+"name": "#Get_copper_wire",
+"value": "MEDIUM",
+"x": 296,
+"y": 424,
+"plugs": [
+{
+"id": 21,
+"type": 2
+},
+{
+"id": 22,
+"type": 3,
+"trgs": [
+33
+]
+}
+]
+},
+{
+"type": 256,
+"id": 26,
+"name": "#Get_bauxite",
+"value": "EASY",
+"x": 296,
+"y": 336,
+"plugs": [
+{
+"id": 27,
+"type": 2
+},
+{
+"id": 28,
+"type": 3,
+"trgs": [
+33
+]
+}
+]
+},
+{
+"type": 256,
+"id": 32,
+"name": "#Get_letter",
+"x": 464,
+"y": 424,
+"plugs": [
+{
+"id": 33,
+"type": 2
+},
+{
+"id": 34,
+"type": 3,
+"trgs": [
+48,
+36
+]
+}
+]
+},
+{
+"type": 256,
+"id": 35,
+"name": "#Learn_magic_trick",
+"value": "MEMORY",
+"x": 600,
+"y": 376,
+"plugs": [
+{
+"id": 36,
+"type": 2
+},
+{
+"id": 37,
+"type": 3,
+"trgs": [
+45,
+57
+]
+}
+]
+},
+{
+"type": 256,
+"id": 44,
+"name": "#Trick_Mechanic",
+"x": 776,
+"y": 376,
+"plugs": [
+{
+"id": 45,
+"type": 2
+},
+{
+"id": 46,
+"type": 3,
+"trgs": [
+60
+]
+}
+]
+},
+{
+"type": 256,
+"id": 47,
+"name": "#Play_piano",
+"value": "RYTHM",
+"x": 600,
+"y": 472,
+"plugs": [
+{
+"id": 48,
+"type": 2
+},
+{
+"id": 49,
+"type": 3,
+"trgs": [
+51
+]
+}
+]
+},
+{
+"type": 256,
+"id": 50,
+"name": "#Impress_Julia",
+"x": 784,
+"y": 472,
+"plugs": [
+{
+"id": 51,
+"type": 2
+},
+{
+"id": 52,
+"type": 3,
+"trgs": [
+60
+]
+}
+]
+},
+{
+"type": 256,
+"id": 56,
+"name": "#Impress_Walter",
+"x": 776,
+"y": 280,
+"plugs": [
+{
+"id": 57,
+"type": 2
+},
+{
+"id": 58,
+"type": 3,
+"trgs": [
+60
+]
+}
+]
+},
+{
+"type": 256,
+"id": 59,
+"name": "#Access_cabin",
+"value": "PUZZLE",
+"x": 952,
+"y": 424,
+"plugs": [
+{
+"id": 60,
+"type": 2
+},
+{
+"id": 61,
+"type": 3,
+"trgs": [
+72,
+69
+]
+}
+]
+},
+{
+"type": 256,
+"id": 68,
+"name": "#Repair_electric",
+"value": "LOGIC",
+"x": 1104,
+"y": 472,
+"plugs": [
+{
+"id": 69,
+"type": 2
+},
+{
+"id": 70,
+"type": 3,
+"trgs": [
+75
+]
+}
+]
+},
+{
+"type": 256,
+"id": 71,
+"name": "#Letter_to_Cap",
+"value": "MEMORY",
+"x": 1104,
+"y": 376,
+"plugs": [
+{
+"id": 72,
+"type": 2
+},
+{
+"id": 73,
+"type": 3,
+"trgs": [
+78
+]
+}
+]
+},
+{
+"type": 256,
+"id": 74,
+"name": "#Tell_Ian",
+"x": 1256,
+"y": 472,
+"plugs": [
+{
+"id": 75,
+"type": 2
+},
+{
+"id": 76,
+"type": 3,
+"trgs": [
+81
+]
+}
+]
+},
+{
+"type": 256,
+"id": 77,
+"name": "#Deactivate_Box",
+"value": "LOGIC",
+"x": 1256,
+"y": 376,
+"plugs": [
+{
+"id": 78,
+"type": 2
+},
+{
+"id": 79,
+"type": 3,
+"trgs": [
+81
+]
+}
+]
+},
+{
+"type": 256,
+"id": 80,
+"name": "#Hide_Walter",
+"x": 1408,
+"y": 424,
+"plugs": [
+{
+"id": 81,
+"type": 2
+},
+{
+"id": 82,
 "type": 3,
 "trgs": [
 4
