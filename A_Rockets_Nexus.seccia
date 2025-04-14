@@ -6,13 +6,10 @@
 "game": {
 "name": "A_Rockets_Nexus",
 "version": "1.0.0",
-"width": "1820",
-"height": "1024",
+"width": "1920",
+"height": "1080",
 "font": "Cartoon",
 "lightAmbient": "255",
-"balloonImageMargin": "10,10,63,33",
-"balloonTextMargin": "10,10,11,36",
-"choiceMargin": "10,150,10,10",
 "scripts": {
 "init": "// this script is called when a new game is started or when a previous game is loaded\r\n// you can set here your variables that will be initialized even for old savegames"
 },
@@ -36,7 +33,22 @@
 "name": "play_web",
 "distribution": "Local"
 }
-]
+],
+"fullscreen": "1",
+"title": "A Rocket's Nexus!",
+"author": "Dylan Hollemaert",
+"fontColorBack": "0",
+"subtitleSpeed": "Fast",
+"subtitleMargin": "24",
+"typewriter": "0",
+"vibration": "0",
+"randDlgChoices": "0",
+"balloon": "0",
+"choice": "0",
+"choiceSize": "0",
+"choiceIconSize": "0",
+"choiceSpaceWidth": "0",
+"choiceSpaceHeight": "0"
 },
 "palette": {
 "Blue": 16744448,
@@ -129,13 +141,13 @@
 },
 "scenario": {
 "board": {
-"nextid": 83,
+"nextid": 86,
 "x": 73,
 "sections": [
 {
 "name": "Intro / Plot",
 "desc": "Helps the player to discover the rocket's rooms and NPCs",
-"width": 240,
+"width": 360,
 "diagram": {
 "board": {
 "nextid": 1
@@ -185,17 +197,17 @@
 "id": 2,
 "type": 3,
 "trgs": [
-9
+84
 ]
 }
 ],
-"exit": "// Assign an object to the player\r\ncontrol P_HERO O_HERO\r\n\r\n// Change the current player\r\nswitch P_HERO\r\n\r\n// Change the current scene\r\njump S_HOME"
+"exit": "// Assign an object to the player\r\ncontrol P_HERO O_PERSO_FIRSTDREAM\r\n// Change the current player\r\nswitch P_HERO\r\n// Change the current scene\r\njump S_FIRSTDREAM"
 },
 {
 "type": 260,
 "id": 3,
 "name": "end",
-"x": 1556,
+"x": 1676,
 "y": 424,
 "plugs": [
 {
@@ -209,7 +221,7 @@
 "id": 8,
 "name": "#Get_lab_key",
 "value": "SEARCH",
-"x": 144,
+"x": 264,
 "y": 424,
 "plugs": [
 {
@@ -232,7 +244,7 @@
 "id": 17,
 "name": "#Get_acid",
 "value": "HARD",
-"x": 304,
+"x": 424,
 "y": 512,
 "plugs": [
 {
@@ -253,7 +265,7 @@
 "id": 20,
 "name": "#Get_copper_wire",
 "value": "MEDIUM",
-"x": 296,
+"x": 416,
 "y": 424,
 "plugs": [
 {
@@ -274,7 +286,7 @@
 "id": 26,
 "name": "#Get_bauxite",
 "value": "EASY",
-"x": 296,
+"x": 416,
 "y": 336,
 "plugs": [
 {
@@ -294,7 +306,7 @@
 "type": 256,
 "id": 32,
 "name": "#Get_letter",
-"x": 464,
+"x": 584,
 "y": 424,
 "plugs": [
 {
@@ -316,7 +328,7 @@
 "id": 35,
 "name": "#Learn_magic_trick",
 "value": "MEMORY",
-"x": 600,
+"x": 720,
 "y": 376,
 "plugs": [
 {
@@ -337,7 +349,7 @@
 "type": 256,
 "id": 44,
 "name": "#Trick_Mechanic",
-"x": 776,
+"x": 896,
 "y": 376,
 "plugs": [
 {
@@ -358,7 +370,7 @@
 "id": 47,
 "name": "#Play_piano",
 "value": "RYTHM",
-"x": 600,
+"x": 720,
 "y": 472,
 "plugs": [
 {
@@ -378,7 +390,7 @@
 "type": 256,
 "id": 50,
 "name": "#Impress_Julia",
-"x": 784,
+"x": 904,
 "y": 472,
 "plugs": [
 {
@@ -398,7 +410,7 @@
 "type": 256,
 "id": 56,
 "name": "#Impress_Walter",
-"x": 776,
+"x": 896,
 "y": 280,
 "plugs": [
 {
@@ -419,7 +431,7 @@
 "id": 59,
 "name": "#Access_cabin",
 "value": "PUZZLE",
-"x": 952,
+"x": 1072,
 "y": 424,
 "plugs": [
 {
@@ -441,7 +453,7 @@
 "id": 68,
 "name": "#Repair_electric",
 "value": "LOGIC",
-"x": 1104,
+"x": 1224,
 "y": 472,
 "plugs": [
 {
@@ -462,7 +474,7 @@
 "id": 71,
 "name": "#Letter_to_Cap",
 "value": "MEMORY",
-"x": 1104,
+"x": 1224,
 "y": 376,
 "plugs": [
 {
@@ -482,7 +494,7 @@
 "type": 256,
 "id": 74,
 "name": "#Tell_Ian",
-"x": 1256,
+"x": 1376,
 "y": 472,
 "plugs": [
 {
@@ -503,7 +515,7 @@
 "id": 77,
 "name": "#Deactivate_Box",
 "value": "LOGIC",
-"x": 1256,
+"x": 1376,
 "y": 376,
 "plugs": [
 {
@@ -523,7 +535,7 @@
 "type": 256,
 "id": 80,
 "name": "#Hide_Walter",
-"x": 1408,
+"x": 1528,
 "y": 424,
 "plugs": [
 {
@@ -538,27 +550,235 @@
 ]
 }
 ]
+},
+{
+"type": 256,
+"id": 83,
+"name": "#prelude",
+"x": 144,
+"y": 424,
+"plugs": [
+{
+"id": 84,
+"type": 2
+},
+{
+"id": 85,
+"type": 3,
+"trgs": [
+9
+]
+}
+]
 }
 ]
 }
 },
 "roles": [
 {
-"sid": 2,
-"uid": "R_HOME",
+"sid": 8,
+"uid": "R_FIRSTDREAM",
 "graph": {
 "board": {
-"nextid": 3,
+"nextid": 52,
+"x": 1172,
+"y": 636,
 "boxes": [
 {
 "type": 257,
 "id": 1,
+"x": -1145,
+"y": -606,
 "plugs": [
 {
 "id": 2,
-"type": 3
+"type": 3,
+"trgs": [
+12
+]
 }
 ]
+},
+{
+"type": 782,
+"id": 11,
+"x": -1041,
+"y": -606,
+"plugs": [
+{
+"id": 12,
+"type": 2
+},
+{
+"id": 13,
+"type": 3,
+"trgs": [
+15
+]
+}
+],
+"scene": "S_FIRSTDREAM",
+"timeline": "TIMELINE"
+},
+{
+"type": 786,
+"id": 14,
+"x": -867,
+"y": -606,
+"plugs": [
+{
+"id": 15,
+"type": 2
+},
+{
+"id": 16,
+"type": 3
+}
+],
+"visible": "True",
+"duration": "3000",
+"scene": "S_FIRSTDREAM",
+"cursor": "False",
+"bag": "False"
+},
+{
+"type": 787,
+"id": 23,
+"x": -1038,
+"y": -442,
+"plugs": [
+{
+"id": 24,
+"type": 2
+},
+{
+"id": 25,
+"type": 3
+}
+],
+"song": "song_firstdream",
+"channel": "0",
+"volume": "100",
+"loop": "True",
+"crossfade": "0",
+"last": "False"
+},
+{
+"type": 257,
+"id": 29,
+"x": -1145,
+"y": -442,
+"plugs": [
+{
+"id": 30,
+"type": 3,
+"trgs": [
+24
+]
+}
+]
+},
+{
+"type": 1287,
+"id": 31,
+"x": -1140,
+"y": -294,
+"plugs": [
+{
+"id": 32,
+"type": 3,
+"trgs": [
+39
+]
+}
+],
+"varCmp": "==",
+"scene": "S_FIRSTDREAM",
+"obj": "O_PERSO_FIRSTDREAM2"
+},
+{
+"type": 781,
+"id": 38,
+"x": -926,
+"y": -294,
+"plugs": [
+{
+"id": 39,
+"type": 2
+},
+{
+"id": 40,
+"type": 3,
+"trgs": [
+42
+]
+}
+],
+"dialog": "D_FIRSTDREAM",
+"sentence": "13"
+},
+{
+"type": 782,
+"id": 41,
+"x": -665,
+"y": -294,
+"plugs": [
+{
+"id": 42,
+"type": 2
+},
+{
+"id": 43,
+"type": 3,
+"trgs": [
+45
+]
+}
+],
+"scene": "S_FIRSTDREAM",
+"timeline": "DREAM_END"
+},
+{
+"type": 780,
+"id": 44,
+"x": -465,
+"y": -294,
+"plugs": [
+{
+"id": 45,
+"type": 2
+},
+{
+"id": 46,
+"type": 3,
+"trgs": [
+50
+]
+}
+],
+"puzzle": "#prelude"
+},
+{
+"type": 787,
+"id": 49,
+"x": -342,
+"y": -294,
+"plugs": [
+{
+"id": 50,
+"type": 2
+},
+{
+"id": 51,
+"type": 3
+}
+],
+"song": "song_firstdream",
+"channel": "0",
+"volume": "0",
+"loop": "False",
+"crossfade": "0",
+"last": "False"
 }
 ]
 }
@@ -639,31 +859,1148 @@
 "opacitySpeed": 100
 }
 },
-"nextID": 2,
-"role": "R_HOME"
+"zoom": 38,
+"nextID": 22,
+"role": "R_FIRSTDREAM",
+"x": -149,
+"y": -18
 },
 "objects": [
 {
-"uid": "O_HERO",
+"uid": "O_BG_FIRSTDREAM",
+"x": 966,
+"y": 540,
+"depths": [
+{
+"a": 100,
+"b": 100
+},
+{
+"y": 1072,
+"a": 100,
+"b": 100
+}
+],
+"tags": [
+"",
+"",
+"",
+""
+],
+"paths": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+],
+"grids": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+],
 "id": 1,
-"x": 910,
-"y": 512,
+"visible": 1,
+"placement": "BACK"
+},
+{
+"uid": "O_PERSO_FIRSTDREAM",
+"depths": [
+{
+"a": 100,
+"b": 100
+},
+{
+"y": 1072,
+"a": 100,
+"b": 100
+}
+],
+"id": 13,
+"tags": [
+"",
+"",
+"",
+""
+],
+"visible": 1,
+"x": 2294,
+"y": 622,
+"parallax": 100,
+"placement": "OBJECT",
+"angle": 15,
+"lightAmbient": 255,
+"lightDiffuse": 16777215,
+"lightAngle": 30,
+"lightDist": -1,
+"grids": [
+{
+"cells": [
+{
+"col": 60,
+"row": 39
+},
+{
+"col": 60,
+"row": 40
+},
+{
+"col": 60,
+"row": 41
+},
+{
+"col": 60,
+"row": 42
+},
+{
+"col": 61,
+"row": 39
+},
+{
+"col": 61,
+"row": 40
+},
+{
+"col": 61,
+"row": 41
+},
+{
+"col": 61,
+"row": 42
+},
+{
+"col": 62,
+"row": 39
+},
+{
+"col": 62,
+"row": 40
+},
+{
+"col": 62,
+"row": 41
+},
+{
+"col": 62,
+"row": 42
+},
+{
+"col": 63,
+"row": 39
+},
+{
+"col": 63,
+"row": 40
+},
+{
+"col": 63,
+"row": 41
+},
+{
+"col": 63,
+"row": 42
+},
+{
+"col": 59,
+"row": 39
+},
+{
+"col": 59,
+"row": 40
+},
+{
+"col": 59,
+"row": 41
+},
+{
+"col": 59,
+"row": 42
+},
+{
+"col": 58,
+"row": 39
+},
+{
+"col": 58,
+"row": 40
+},
+{
+"col": 58,
+"row": 41
+},
+{
+"col": 58,
+"row": 42
+},
+{
+"col": 57,
+"row": 39
+},
+{
+"col": 57,
+"row": 40
+},
+{
+"col": 57,
+"row": 41
+},
+{
+"col": 57,
+"row": 42
+},
+{
+"col": 56,
+"row": 39
+},
+{
+"col": 56,
+"row": 40
+},
+{
+"col": 56,
+"row": 41
+},
+{
+"col": 56,
+"row": 42
+},
+{
+"col": 55,
+"row": 39
+},
+{
+"col": 55,
+"row": 40
+},
+{
+"col": 55,
+"row": 41
+},
+{
+"col": 55,
+"row": 42
+},
+{
+"col": 55,
+"row": 38
+},
+{
+"col": 56,
+"row": 38
+},
+{
+"col": 57,
+"row": 38
+},
+{
+"col": 58,
+"row": 38
+},
+{
+"col": 55,
+"row": 37
+},
+{
+"col": 56,
+"row": 37
+},
+{
+"col": 57,
+"row": 37
+},
+{
+"col": 58,
+"row": 37
+},
+{
+"col": 55,
+"row": 36
+},
+{
+"col": 56,
+"row": 36
+},
+{
+"col": 57,
+"row": 36
+},
+{
+"col": 58,
+"row": 36
+},
+{
+"col": 55,
+"row": 35
+},
+{
+"col": 56,
+"row": 35
+},
+{
+"col": 57,
+"row": 35
+},
+{
+"col": 58,
+"row": 35
+},
+{
+"col": 55,
+"row": 34
+},
+{
+"col": 56,
+"row": 34
+},
+{
+"col": 57,
+"row": 34
+},
+{
+"col": 58,
+"row": 34
+},
+{
+"col": 55,
+"row": 33
+},
+{
+"col": 56,
+"row": 33
+},
+{
+"col": 57,
+"row": 33
+},
+{
+"col": 58,
+"row": 33
+},
+{
+"col": 55,
+"row": 32
+},
+{
+"col": 56,
+"row": 32
+},
+{
+"col": 57,
+"row": 32
+},
+{
+"col": 58,
+"row": 32
+},
+{
+"col": 55,
+"row": 31
+},
+{
+"col": 56,
+"row": 31
+},
+{
+"col": 57,
+"row": 31
+},
+{
+"col": 58,
+"row": 31
+},
+{
+"col": 55,
+"row": 30
+},
+{
+"col": 56,
+"row": 30
+},
+{
+"col": 57,
+"row": 30
+},
+{
+"col": 58,
+"row": 30
+},
+{
+"col": 55,
+"row": 29
+},
+{
+"col": 56,
+"row": 29
+},
+{
+"col": 57,
+"row": 29
+},
+{
+"col": 58,
+"row": 29
+},
+{
+"col": 55,
+"row": 28
+},
+{
+"col": 56,
+"row": 28
+},
+{
+"col": 57,
+"row": 28
+},
+{
+"col": 58,
+"row": 28
+},
+{
+"col": 55,
+"row": 27
+},
+{
+"col": 56,
+"row": 27
+},
+{
+"col": 57,
+"row": 27
+},
+{
+"col": 58,
+"row": 27
+},
+{
+"col": 59,
+"row": 27
+},
+{
+"col": 59,
+"row": 28
+},
+{
+"col": 59,
+"row": 29
+},
+{
+"col": 59,
+"row": 30
+},
+{
+"col": 60,
+"row": 27
+},
+{
+"col": 60,
+"row": 28
+},
+{
+"col": 60,
+"row": 29
+},
+{
+"col": 60,
+"row": 30
+},
+{
+"col": 61,
+"row": 27
+},
+{
+"col": 61,
+"row": 28
+},
+{
+"col": 61,
+"row": 29
+},
+{
+"col": 61,
+"row": 30
+},
+{
+"col": 59,
+"row": 31
+},
+{
+"col": 60,
+"row": 31
+},
+{
+"col": 61,
+"row": 31
+},
+{
+"col": 62,
+"row": 28
+},
+{
+"col": 62,
+"row": 29
+},
+{
+"col": 62,
+"row": 30
+},
+{
+"col": 62,
+"row": 31
+},
+{
+"col": 63,
+"row": 28
+},
+{
+"col": 63,
+"row": 29
+},
+{
+"col": 63,
+"row": 30
+},
+{
+"col": 63,
+"row": 31
+},
+{
+"col": 64,
+"row": 28
+},
+{
+"col": 64,
+"row": 29
+},
+{
+"col": 64,
+"row": 30
+},
+{
+"col": 64,
+"row": 31
+},
+{
+"col": 65,
+"row": 28
+},
+{
+"col": 65,
+"row": 29
+},
+{
+"col": 65,
+"row": 30
+},
+{
+"col": 65,
+"row": 31
+},
+{
+"col": 62,
+"row": 27
+},
+{
+"col": 63,
+"row": 27
+},
+{
+"col": 64,
+"row": 27
+},
+{
+"col": 65,
+"row": 27
+},
+{
+"col": 62,
+"row": 32
+},
+{
+"col": 63,
+"row": 32
+},
+{
+"col": 64,
+"row": 32
+},
+{
+"col": 65,
+"row": 32
+},
+{
+"col": 62,
+"row": 33
+},
+{
+"col": 63,
+"row": 33
+},
+{
+"col": 64,
+"row": 33
+},
+{
+"col": 65,
+"row": 33
+},
+{
+"col": 62,
+"row": 34
+},
+{
+"col": 63,
+"row": 34
+},
+{
+"col": 64,
+"row": 34
+},
+{
+"col": 65,
+"row": 34
+},
+{
+"col": 62,
+"row": 35
+},
+{
+"col": 63,
+"row": 35
+},
+{
+"col": 64,
+"row": 35
+},
+{
+"col": 65,
+"row": 35
+},
+{
+"col": 62,
+"row": 36
+},
+{
+"col": 63,
+"row": 36
+},
+{
+"col": 64,
+"row": 36
+},
+{
+"col": 65,
+"row": 36
+},
+{
+"col": 62,
+"row": 37
+},
+{
+"col": 63,
+"row": 37
+},
+{
+"col": 64,
+"row": 37
+},
+{
+"col": 65,
+"row": 37
+},
+{
+"col": 62,
+"row": 38
+},
+{
+"col": 63,
+"row": 38
+},
+{
+"col": 64,
+"row": 38
+},
+{
+"col": 65,
+"row": 38
+},
+{
+"col": 64,
+"row": 39
+},
+{
+"col": 65,
+"row": 39
+},
+{
+"col": 64,
+"row": 40
+},
+{
+"col": 65,
+"row": 40
+},
+{
+"col": 64,
+"row": 41
+},
+{
+"col": 65,
+"row": 41
+},
+{
+"col": 64,
+"row": 42
+},
+{
+"col": 65,
+"row": 42
+},
+{
+"col": 60,
+"row": 38
+},
+{
+"col": 61,
+"row": 38
+},
+{
+"col": 59,
+"row": 38
+},
+{
+"col": 59,
+"row": 37
+},
+{
+"col": 60,
+"row": 37
+},
+{
+"col": 61,
+"row": 37
+},
+{
+"col": 59,
+"row": 36
+},
+{
+"col": 60,
+"row": 36
+},
+{
+"col": 61,
+"row": 36
+},
+{
+"col": 59,
+"row": 35
+},
+{
+"col": 60,
+"row": 35
+},
+{
+"col": 61,
+"row": 35
+},
+{
+"col": 59,
+"row": 34
+},
+{
+"col": 60,
+"row": 34
+},
+{
+"col": 61,
+"row": 34
+},
+{
+"col": 59,
+"row": 33
+},
+{
+"col": 60,
+"row": 33
+},
+{
+"col": 61,
+"row": 33
+},
+{
+"col": 59,
+"row": 32
+},
+{
+"col": 60,
+"row": 32
+},
+{
+"col": 61,
+"row": 32
+},
+{
+"col": 55,
+"row": 26
+},
+{
+"col": 56,
+"row": 26
+},
+{
+"col": 57,
+"row": 26
+},
+{
+"col": 58,
+"row": 26
+},
+{
+"col": 59,
+"row": 26
+},
+{
+"col": 60,
+"row": 26
+},
+{
+"col": 61,
+"row": 26
+},
+{
+"col": 62,
+"row": 26
+},
+{
+"col": 63,
+"row": 26
+},
+{
+"col": 64,
+"row": 26
+},
+{
+"col": 65,
+"row": 26
+}
+]
+},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+],
+"paths": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+]
+},
+{
+"uid": "O_OLGA_FIRSTDREAM",
+"id": 15,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 1762,
+"y": 1073,
 "parallax": 100,
 "lightAmbient": 255,
 "lightDiffuse": 16777215,
 "lightAngle": 30,
-"lightDist": -1
+"lightDist": -1,
+"grids": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+],
+"paths": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+],
+"visible": 1,
+"ideLocked": true
+},
+{
+"uid": "O_PERSO_FIRSTDREAM2",
+"id": 18,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 957,
+"y": 719,
+"parallax": 100,
+"ideLocked": true,
+"lightAmbient": 255,
+"lightDiffuse": 16777215,
+"lightAngle": 30,
+"lightDist": -1,
+"grids": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+],
+"paths": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+]
 }
 ],
-"sid": 1,
-"uid": "S_HOME"
+"shots": [
+{
+"name": "SHOT_DARK",
+"id": 7,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 959,
+"y": 540,
+"width": 1922,
+"height": 100
+},
+{
+"name": "SHOT_LIGHT",
+"id": 9,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 960,
+"y": 541,
+"width": 1919,
+"height": 100
+},
+{
+"name": "SHOT_LIGHT_END",
+"id": 20,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 964,
+"y": 540,
+"width": 1921,
+"height": 100
+},
+{
+"name": "SHOT_DARK_END",
+"id": 21,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 964,
+"y": 541,
+"width": 1924,
+"height": 100
+}
+],
+"sid": 9,
+"uid": "S_FIRSTDREAM",
+"timelines": [
+{
+"id": 8,
+"name": "TIMELINE",
+"shots": [
+{
+"id": 9,
+"time": 15,
+"duration": 15,
+"cut": {
+"splines": [
+{},
+{},
+{},
+{}
+]
+}
+},
+{
+"id": 7,
+"duration": 15,
+"cut": {
+"exist": true,
+"durationA": 15,
+"durationB": 15,
+"splines": [
+{
+"pts": [
+{},
+{
+"x": 1.0,
+"y": 1.0
+}
+]
+},
+{
+"pts": [
+{},
+{
+"x": 1.0,
+"y": 1.0
+}
+]
+},
+{
+"pts": [
+{},
+{
+"x": 1.0,
+"y": 1.0
+}
+]
+},
+{
+"pts": [
+{},
+{
+"x": 1.0,
+"y": 1.0
+}
+]
+}
+]
+}
+}
+]
+},
+{
+"id": 19,
+"name": "DREAM_END",
+"shots": [
+{
+"id": 20,
+"duration": 15,
+"cut": {
+"exist": true,
+"durationA": 15,
+"durationB": 15,
+"splines": [
+{
+"pts": [
+{
+"y": 1.0
+},
+{
+"x": 1.0
+}
+]
+},
+{
+"pts": [
+{
+"y": 1.0
+},
+{
+"x": 1.0
+}
+]
+},
+{
+"pts": [
+{
+"y": 1.0
+},
+{
+"x": 1.0
+}
+]
+},
+{
+"pts": [
+{
+"y": 1.0
+},
+{
+"x": 1.0
+}
+]
+}
+]
+}
+},
+{
+"id": 21,
+"time": 15,
+"duration": 15,
+"cut": {
+"splines": [
+{},
+{},
+{},
+{}
+]
+}
+}
+]
+}
+]
 }
 ],
 "objects": [
 {
 "object": {
 "bbox": true,
-"maxScale": 100
+"x": 962,
+"y": 540,
+"px": 960,
+"py": 540,
+"width": 1920,
+"height": 1080
 },
 "anims": [
 {
@@ -676,7 +2013,19 @@
 "name": "LEFT"
 },
 {
-"name": "RIGHT"
+"name": "RIGHT",
+"frames": [
+{
+"md5": "7f2c2ac3bba70bd80234ecd4acdfd748",
+"wtrim": 1920,
+"htrim": 1080,
+"xdraw": -2,
+"ydraw": -2,
+"wdraw": 1924,
+"hdraw": 1084
+}
+],
+"count": 1
 },
 {
 "name": "FRONT"
@@ -763,8 +2112,443 @@
 ]
 }
 ],
-"sid": 3,
-"uid": "O_HERO"
+"sid": 6,
+"uid": "O_BG_FIRSTDREAM",
+"packset": {
+"frames": [
+{
+"index2": -1,
+"x": 2,
+"y": 2,
+"w": 1920,
+"h": 1080
+}
+],
+"packs": [
+{
+"count": 1
+}
+]
+}
+},
+{
+"object": {
+"bbox": true,
+"x": 72,
+"y": 287,
+"px": 73,
+"py": 163,
+"width": 144,
+"height": 291,
+"speech": "White"
+},
+"anims": [
+{
+"name": "STOP",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT",
+"frames": [
+{
+"md5": "a3a967a2e44cc6cb6a0b93faf1600ca0",
+"wtrim": 144,
+"htrim": 292,
+"xdraw": -2,
+"ydraw": -2,
+"wdraw": 148,
+"hdraw": 296
+}
+],
+"count": 1
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+}
+],
+"sid": 12,
+"uid": "O_PERSO_FIRSTDREAM",
+"packset": {
+"frames": [
+{
+"index2": -1,
+"x": 2,
+"y": 2,
+"w": 144,
+"h": 292
+}
+],
+"packs": [
+{
+"count": 1
+}
+]
+}
+},
+{
+"object": {
+"bbox": true,
+"maxScale": 100,
+"width": 155,
+"height": 483,
+"x": 83,
+"y": 478
+},
+"anims": [
+{
+"name": "STOP",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT",
+"frames": [
+{
+"md5": "5258ce6d3c41f0ade5c47b2624f3188e",
+"wtrim": 156,
+"htrim": 484,
+"xdraw": -2,
+"ydraw": -2,
+"wdraw": 160,
+"hdraw": 488
+}
+],
+"count": 1
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+}
+],
+"sid": 16,
+"uid": "O_OLGA_FIRSTDREAM",
+"packset": {
+"frames": [
+{
+"index2": -1,
+"x": 2,
+"y": 2,
+"w": 156,
+"h": 484
+}
+],
+"packs": [
+{
+"count": 1
+}
+]
+}
+},
+{
+"object": {
+"bbox": true,
+"x": 72,
+"y": 287,
+"px": 73,
+"py": 163,
+"width": 144,
+"height": 291,
+"speech": "White",
+"maxScale": 100
+},
+"anims": [
+{
+"name": "STOP",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT",
+"frames": [
+{
+"md5": "a3a967a2e44cc6cb6a0b93faf1600ca0",
+"wtrim": 144,
+"htrim": 292,
+"xdraw": -2,
+"ydraw": -2,
+"wdraw": 148,
+"hdraw": 296
+}
+],
+"count": 1
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+}
+],
+"sid": 18,
+"uid": "O_PERSO_FIRSTDREAM2",
+"packset": {
+"frames": [
+{
+"index2": -1,
+"x": 2,
+"y": 2,
+"w": 144,
+"h": 292
+}
+],
+"packs": [
+{
+"count": 1
+}
+]
+}
 }
 ],
 "players": [
@@ -779,6 +2563,59 @@
 }
 ],
 "meta": {
-"nextAssetID": 5
+"nextAssetID": 19
+},
+"dialogs": [
+{
+"sid": 14,
+"uid": "D_FIRSTDREAM",
+"dialog": {
+"nextID": 20,
+"sentence": {
+"sentences": [
+{
+"id": 13,
+"text": {
+"en": "Tu veux prouver ta valeur… n’est-ce pas ?"
+},
+"speaker": "O_OLGA_FIRSTDREAM",
+"tags": [
+"",
+"",
+"",
+""
+],
+"sentences": [
+{
+"id": 17,
+"text": {
+"en": "…Quoi ? Où suis-je ?"
+},
+"speaker": "O_PERSO_FIRSTDREAM2",
+"sentences": [
+{
+"id": 18,
+"text": {
+"en": "Apporte-moi de l’aluminium… mais pas n’importe lequel…  \r\nIl doit être vivant… chargé. \r\nTu devras chercher… Bauxite. Cuivre. Acide.\r\n\r\nAssemble-les… Et tu verras."
+},
+"speaker": "O_OLGA_FIRSTDREAM",
+"sentences": [
+{
+"id": 19,
+"text": {
+"en": "Je dois… aller au laboratoire."
+},
+"speaker": "O_PERSO_FIRSTDREAM2"
 }
+]
+}
+]
+}
+]
+}
+]
+}
+}
+}
+]
 }
