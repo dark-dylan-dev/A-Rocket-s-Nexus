@@ -34,7 +34,7 @@
 "distribution": "Local"
 }
 ],
-"fullscreen": "1",
+"fullscreen": "0",
 "title": "A Rocket's Nexus!",
 "author": "Dylan Hollemaert",
 "fontColorBack": "0",
@@ -580,15 +580,15 @@
 "uid": "R_FIRSTDREAM",
 "graph": {
 "board": {
-"nextid": 52,
+"nextid": 55,
 "x": 1172,
-"y": 636,
+"y": 796,
 "boxes": [
 {
 "type": 257,
 "id": 1,
-"x": -1145,
-"y": -606,
+"x": -1171,
+"y": -794,
 "plugs": [
 {
 "id": 2,
@@ -602,8 +602,8 @@
 {
 "type": 782,
 "id": 11,
-"x": -1041,
-"y": -606,
+"x": -1067,
+"y": -794,
 "plugs": [
 {
 "id": 12,
@@ -618,13 +618,13 @@
 }
 ],
 "scene": "S_FIRSTDREAM",
-"timeline": "TIMELINE"
+"timeline": "DREAM_START"
 },
 {
 "type": 786,
 "id": 14,
-"x": -867,
-"y": -606,
+"x": -893,
+"y": -794,
 "plugs": [
 {
 "id": 15,
@@ -644,8 +644,8 @@
 {
 "type": 787,
 "id": 23,
-"x": -1038,
-"y": -442,
+"x": -1064,
+"y": -630,
 "plugs": [
 {
 "id": 24,
@@ -666,8 +666,8 @@
 {
 "type": 257,
 "id": 29,
-"x": -1145,
-"y": -442,
+"x": -1171,
+"y": -630,
 "plugs": [
 {
 "id": 30,
@@ -681,8 +681,8 @@
 {
 "type": 1287,
 "id": 31,
-"x": -1140,
-"y": -294,
+"x": -1171,
+"y": -482,
 "plugs": [
 {
 "id": 32,
@@ -699,8 +699,8 @@
 {
 "type": 781,
 "id": 38,
-"x": -926,
-"y": -294,
+"x": -952,
+"y": -482,
 "plugs": [
 {
 "id": 39,
@@ -720,8 +720,8 @@
 {
 "type": 782,
 "id": 41,
-"x": -665,
-"y": -294,
+"x": -696,
+"y": -482,
 "plugs": [
 {
 "id": 42,
@@ -731,7 +731,7 @@
 "id": 43,
 "type": 3,
 "trgs": [
-45
+50
 ]
 }
 ],
@@ -739,30 +739,10 @@
 "timeline": "DREAM_END"
 },
 {
-"type": 780,
-"id": 44,
-"x": -465,
-"y": -294,
-"plugs": [
-{
-"id": 45,
-"type": 2
-},
-{
-"id": 46,
-"type": 3,
-"trgs": [
-50
-]
-}
-],
-"puzzle": "#prelude"
-},
-{
 "type": 787,
 "id": 49,
-"x": -342,
-"y": -294,
+"x": -461,
+"y": -483,
 "plugs": [
 {
 "id": 50,
@@ -770,7 +750,10 @@
 },
 {
 "id": 51,
-"type": 3
+"type": 3,
+"trgs": [
+53
+]
 }
 ],
 "song": "song_firstdream",
@@ -779,6 +762,47 @@
 "loop": "False",
 "crossfade": "0",
 "last": "False"
+},
+{
+"type": 775,
+"id": 52,
+"x": -261,
+"y": -483,
+"plugs": [
+{
+"id": 53,
+"type": 2
+},
+{
+"id": 54,
+"type": 3
+}
+],
+"scene": "S_LIVINGROOM",
+"durationOut": "100",
+"durationWait": "0",
+"durationIn": "0"
+}
+]
+}
+}
+},
+{
+"sid": 20,
+"uid": "R_LIVINGROOM",
+"graph": {
+"board": {
+"nextid": 3,
+"boxes": [
+{
+"type": 257,
+"id": 1,
+"plugs": [
+{
+"id": 2,
+"type": 3
+}
+]
 }
 ]
 }
@@ -859,58 +883,13 @@
 "opacitySpeed": 100
 }
 },
-"zoom": 38,
+"zoom": 48,
 "nextID": 22,
 "role": "R_FIRSTDREAM",
-"x": -149,
-"y": -18
+"x": -130,
+"y": -37
 },
 "objects": [
-{
-"uid": "O_BG_FIRSTDREAM",
-"x": 966,
-"y": 540,
-"depths": [
-{
-"a": 100,
-"b": 100
-},
-{
-"y": 1072,
-"a": 100,
-"b": 100
-}
-],
-"tags": [
-"",
-"",
-"",
-""
-],
-"paths": [
-{},
-{},
-{},
-{},
-{},
-{},
-{},
-{}
-],
-"grids": [
-{},
-{},
-{},
-{},
-{},
-{},
-{},
-{}
-],
-"id": 1,
-"visible": 1,
-"placement": "BACK"
-},
 {
 "uid": "O_PERSO_FIRSTDREAM",
 "depths": [
@@ -1854,7 +1833,7 @@
 "timelines": [
 {
 "id": 8,
-"name": "TIMELINE",
+"name": "DREAM_START",
 "shots": [
 {
 "id": 9,
@@ -1989,148 +1968,483 @@
 ]
 }
 ]
+},
+{
+"scene": {
+"lightAmbient": -1,
+"lightBlur": -1,
+"backOpacityMin": 100,
+"backOpacityMax": 100,
+"backOpacitySpeed": 100,
+"layers": {
+"MA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+}
+},
+"zoom": 48,
+"nextID": 1
+},
+"sid": 22,
+"uid": "S_LIVINGROOM"
+},
+{
+"scene": {
+"lightAmbient": -1,
+"lightBlur": -1,
+"backOpacityMin": 100,
+"backOpacityMax": 100,
+"backOpacitySpeed": 100,
+"layers": {
+"MA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+}
+},
+"zoom": 48,
+"nextID": 1
+},
+"sid": 23,
+"uid": "S_LABORATORY"
+},
+{
+"scene": {
+"lightAmbient": -1,
+"lightBlur": -1,
+"backOpacityMin": 100,
+"backOpacityMax": 100,
+"backOpacitySpeed": 100,
+"layers": {
+"MA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+}
+},
+"zoom": 48,
+"nextID": 1
+},
+"sid": 24,
+"uid": "S_THEATRE"
+},
+{
+"scene": {
+"lightAmbient": -1,
+"lightBlur": -1,
+"backOpacityMin": 100,
+"backOpacityMax": 100,
+"backOpacitySpeed": 100,
+"layers": {
+"MA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+}
+},
+"zoom": 48,
+"nextID": 1
+},
+"sid": 25,
+"uid": "S_GARAGE"
+},
+{
+"scene": {
+"lightAmbient": -1,
+"lightBlur": -1,
+"backOpacityMin": 100,
+"backOpacityMax": 100,
+"backOpacitySpeed": 100,
+"layers": {
+"MA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+}
+},
+"zoom": 48,
+"nextID": 1
+},
+"sid": 26,
+"uid": "S_DORMS"
+},
+{
+"scene": {
+"lightAmbient": -1,
+"lightBlur": -1,
+"backOpacityMin": 100,
+"backOpacityMax": 100,
+"backOpacitySpeed": 100,
+"layers": {
+"MA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+}
+},
+"zoom": 48,
+"nextID": 1
+},
+"sid": 27,
+"uid": "S_CABIN"
 }
 ],
 "objects": [
-{
-"object": {
-"bbox": true,
-"x": 962,
-"y": 540,
-"px": 960,
-"py": 540,
-"width": 1920,
-"height": 1080
-},
-"anims": [
-{
-"name": "STOP",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT",
-"frames": [
-{
-"md5": "7f2c2ac3bba70bd80234ecd4acdfd748",
-"wtrim": 1920,
-"htrim": 1080,
-"xdraw": -2,
-"ydraw": -2,
-"wdraw": 1924,
-"hdraw": 1084
-}
-],
-"count": 1
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "TALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "WALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-}
-],
-"sid": 6,
-"uid": "O_BG_FIRSTDREAM",
-"packset": {
-"frames": [
-{
-"index2": -1,
-"x": 2,
-"y": 2,
-"w": 1920,
-"h": 1080
-}
-],
-"packs": [
-{
-"count": 1
-}
-]
-}
-},
 {
 "object": {
 "bbox": true,
@@ -2166,70 +2480,6 @@
 }
 ],
 "count": 1
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "TALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "WALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
 },
 {
 "name": "FRONT"
@@ -2304,70 +2554,6 @@
 }
 ],
 "count": 1
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "TALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "WALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
 },
 {
 "name": "FRONT"
@@ -2465,6 +2651,82 @@
 "name": "BR"
 }
 ]
+}
+],
+"sid": 18,
+"uid": "O_PERSO_FIRSTDREAM2",
+"packset": {
+"frames": [
+{
+"index2": -1,
+"x": 2,
+"y": 2,
+"w": 144,
+"h": 292
+}
+],
+"packs": [
+{
+"count": 1
+}
+]
+}
+},
+{
+"object": {
+"bbox": true,
+"maxScale": -1,
+"x": 672,
+"y": 384,
+"px": 672,
+"py": 384,
+"width": 1344,
+"height": 768
+},
+"anims": [
+{
+"name": "STOP",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT",
+"frames": [
+{
+"md5": "ec5854b75bd8d63ba762676c030fab09",
+"wtrim": 1344,
+"htrim": 768,
+"xdraw": -2,
+"ydraw": -2,
+"wdraw": 1348,
+"hdraw": 772
+}
+],
+"count": 1
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
 },
 {
 "name": "TALK",
@@ -2531,16 +2793,16 @@
 ]
 }
 ],
-"sid": 18,
-"uid": "O_PERSO_FIRSTDREAM2",
+"sid": 21,
+"uid": "O_BG_LIVINGROOM",
 "packset": {
 "frames": [
 {
 "index2": -1,
 "x": 2,
 "y": 2,
-"w": 144,
-"h": 292
+"w": 1344,
+"h": 768
 }
 ],
 "packs": [
@@ -2563,7 +2825,7 @@
 }
 ],
 "meta": {
-"nextAssetID": 19
+"nextAssetID": 28
 },
 "dialogs": [
 {
