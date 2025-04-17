@@ -147,7 +147,7 @@
 "scenario": {
 "board": {
 "nextid": 86,
-"x": 189,
+"x": 146,
 "sections": [
 {
 "name": "Intro / Plot",
@@ -225,7 +225,6 @@
 "type": 256,
 "id": 8,
 "name": "#Get_lab_key",
-"value": "SEARCH",
 "x": 160,
 "y": 424,
 "plugs": [
@@ -242,14 +241,12 @@
 18
 ]
 }
-],
-"exit": "take P_HERO O_LAB_KEY"
+]
 },
 {
 "type": 256,
 "id": 17,
 "name": "#Get_acid",
-"value": "HARD",
 "x": 320,
 "y": 512,
 "plugs": [
@@ -271,7 +268,6 @@
 "type": 256,
 "id": 20,
 "name": "#Get_copper_wire",
-"value": "MEDIUM",
 "x": 312,
 "y": 424,
 "plugs": [
@@ -287,13 +283,12 @@
 ]
 }
 ],
-"exit": "silent_take P_HERO O_COPPER_WIRE"
+"exit": "take P_HERO O_COPPER_WIRE"
 },
 {
 "type": 256,
 "id": 26,
 "name": "#Get_bauxite",
-"value": "EASY",
 "x": 312,
 "y": 336,
 "plugs": [
@@ -326,7 +321,6 @@
 "id": 34,
 "type": 3,
 "trgs": [
-48,
 36
 ]
 }
@@ -337,9 +331,8 @@
 "type": 256,
 "id": 35,
 "name": "#Learn_magic_trick",
-"value": "MEMORY",
-"x": 616,
-"y": 376,
+"x": 608,
+"y": 424,
 "plugs": [
 {
 "id": 36,
@@ -349,18 +342,20 @@
 "id": 37,
 "type": 3,
 "trgs": [
+51,
 45,
 57
 ]
 }
-]
+],
+"exit": "take P_HERO O_CARD_PACK"
 },
 {
 "type": 256,
 "id": 44,
 "name": "#Trick_Mechanic",
 "x": 792,
-"y": 376,
+"y": 424,
 "plugs": [
 {
 "id": 45,
@@ -377,31 +372,10 @@
 },
 {
 "type": 256,
-"id": 47,
-"name": "#Play_piano",
-"value": "RYTHM",
-"x": 616,
-"y": 472,
-"plugs": [
-{
-"id": 48,
-"type": 2
-},
-{
-"id": 49,
-"type": 3,
-"trgs": [
-51
-]
-}
-]
-},
-{
-"type": 256,
 "id": 50,
 "name": "#Impress_Julia",
 "x": 800,
-"y": 472,
+"y": 520,
 "plugs": [
 {
 "id": 51,
@@ -421,7 +395,7 @@
 "id": 56,
 "name": "#Impress_Walter",
 "x": 792,
-"y": 280,
+"y": 328,
 "plugs": [
 {
 "id": 57,
@@ -440,7 +414,6 @@
 "type": 256,
 "id": 59,
 "name": "#Access_cabin",
-"value": "PUZZLE",
 "x": 968,
 "y": 424,
 "plugs": [
@@ -462,7 +435,6 @@
 "type": 256,
 "id": 68,
 "name": "#Repair_electric",
-"value": "LOGIC",
 "x": 1120,
 "y": 472,
 "plugs": [
@@ -483,9 +455,8 @@
 "type": 256,
 "id": 71,
 "name": "#Letter_to_Cap",
-"value": "MEMORY",
-"x": 1120,
-"y": 376,
+"x": 1192,
+"y": 424,
 "plugs": [
 {
 "id": 72,
@@ -495,7 +466,7 @@
 "id": 73,
 "type": 3,
 "trgs": [
-78
+81
 ]
 }
 ]
@@ -504,7 +475,7 @@
 "type": 256,
 "id": 74,
 "name": "#Tell_Ian",
-"x": 1272,
+"x": 1312,
 "y": 472,
 "plugs": [
 {
@@ -513,27 +484,6 @@
 },
 {
 "id": 76,
-"type": 3,
-"trgs": [
-81
-]
-}
-]
-},
-{
-"type": 256,
-"id": 77,
-"name": "#Deactivate_Box",
-"value": "LOGIC",
-"x": 1272,
-"y": 376,
-"plugs": [
-{
-"id": 78,
-"type": 2
-},
-{
-"id": 79,
 "type": 3,
 "trgs": [
 81
@@ -570,7 +520,7 @@
 "uid": "R_FIRSTDREAM",
 "graph": {
 "board": {
-"nextid": 58,
+"nextid": 65,
 "x": 1172,
 "y": 796,
 "boxes": [
@@ -654,7 +604,7 @@
 "id": 32,
 "type": 3,
 "trgs": [
-39
+59
 ]
 }
 ],
@@ -665,8 +615,8 @@
 {
 "type": 781,
 "id": 38,
-"x": -952,
-"y": -482,
+"x": -822,
+"y": -462,
 "plugs": [
 {
 "id": 39,
@@ -686,8 +636,8 @@
 {
 "type": 782,
 "id": 41,
-"x": -471,
-"y": -482,
+"x": -324,
+"y": -462,
 "plugs": [
 {
 "id": 42,
@@ -704,8 +654,8 @@
 {
 "type": 787,
 "id": 49,
-"x": -681,
-"y": -482,
+"x": -544,
+"y": -462,
 "plugs": [
 {
 "id": 50,
@@ -725,6 +675,31 @@
 "loop": "False",
 "crossfade": "0",
 "last": "False"
+},
+{
+"type": 1035,
+"id": 58,
+"x": -980,
+"y": -482,
+"plugs": [
+{
+"id": 59,
+"type": 2
+},
+{
+"id": 60,
+"type": 3
+},
+{
+"id": 61,
+"type": 3,
+"trgs": [
+39
+]
+}
+],
+"dialog": "D_FIRSTDREAM",
+"said": "19"
 }
 ]
 }
@@ -735,9 +710,9 @@
 "uid": "R_LIVINGROOM",
 "graph": {
 "board": {
-"nextid": 121,
-"x": 1076,
-"y": 392,
+"nextid": 143,
+"x": 1389,
+"y": 731,
 "boxes": [
 {
 "type": 257,
@@ -786,7 +761,7 @@
 }
 ],
 "scene": "S_DORMS",
-"durationOut": "0",
+"durationOut": "400",
 "durationWait": "0",
 "durationIn": "0"
 },
@@ -825,7 +800,7 @@
 }
 ],
 "scene": "S_GARAGE",
-"durationOut": "0",
+"durationOut": "400",
 "durationWait": "0",
 "durationIn": "0"
 },
@@ -864,7 +839,7 @@
 }
 ],
 "scene": "S_THEATRE",
-"durationOut": "0",
+"durationOut": "400",
 "durationWait": "0",
 "durationIn": "0"
 },
@@ -954,76 +929,6 @@
 "sentence2": "4"
 },
 {
-"type": 1283,
-"id": 66,
-"x": -772,
-"y": 193,
-"plugs": [
-{
-"id": 67,
-"type": 3,
-"trgs": [
-93
-]
-}
-],
-"varCmp": "==",
-"scene": "S_LIVINGROOM",
-"door": "DOOR_CABIN_2",
-"mode": "WALK"
-},
-{
-"type": 1031,
-"id": 92,
-"x": -595,
-"y": 193,
-"plugs": [
-{
-"id": 93,
-"type": 2
-},
-{
-"id": 94,
-"type": 3
-},
-{
-"id": 95,
-"type": 3
-},
-{
-"id": 96,
-"type": 3,
-"trgs": [
-99
-]
-},
-{
-"id": 97,
-"type": 3
-}
-],
-"puzzle": "#Access_cabin"
-},
-{
-"type": 781,
-"id": 98,
-"x": -422,
-"y": 233,
-"plugs": [
-{
-"id": 99,
-"type": 2
-},
-{
-"id": 100,
-"type": 3
-}
-],
-"dialog": "D_SOLO",
-"sentence": "5",
-"sentence2": "5"
-},
-{
 "type": 1287,
 "id": 101,
 "x": -200,
@@ -1088,8 +993,8 @@
 {
 "type": 1283,
 "id": 110,
-"x": -776,
-"y": 368,
+"x": -182,
+"y": -66,
 "plugs": [
 {
 "id": 111,
@@ -1107,8 +1012,8 @@
 {
 "type": 1031,
 "id": 112,
-"x": -599,
-"y": 368,
+"x": -5,
+"y": -66,
 "plugs": [
 {
 "id": 113,
@@ -1116,7 +1021,10 @@
 },
 {
 "id": 114,
-"type": 3
+"type": 3,
+"trgs": [
+122
+]
 },
 {
 "id": 115,
@@ -1134,13 +1042,13 @@
 "type": 3
 }
 ],
-"puzzle": "#Access_cabin"
+"puzzle": "#Get_letter"
 },
 {
 "type": 781,
 "id": 118,
-"x": -426,
-"y": 408,
+"x": 170,
+"y": 77,
 "plugs": [
 {
 "id": 119,
@@ -1154,6 +1062,132 @@
 "dialog": "D_SOLO",
 "sentence": "5",
 "sentence2": "5"
+},
+{
+"type": 781,
+"id": 121,
+"x": 171,
+"y": -66,
+"plugs": [
+{
+"id": 122,
+"type": 2
+},
+{
+"id": 123,
+"type": 3
+}
+],
+"dialog": "D_SOLO",
+"sentence": "7",
+"sentence2": "7"
+},
+{
+"type": 1283,
+"id": 127,
+"x": -182,
+"y": 224,
+"plugs": [
+{
+"id": 128,
+"type": 3,
+"trgs": [
+130
+]
+}
+],
+"varCmp": "==",
+"scene": "S_LIVINGROOM",
+"door": "DOOR_CABIN_2",
+"mode": "WALK"
+},
+{
+"type": 1031,
+"id": 129,
+"x": -5,
+"y": 224,
+"plugs": [
+{
+"id": 130,
+"type": 2
+},
+{
+"id": 131,
+"type": 3,
+"trgs": [
+136
+]
+},
+{
+"id": 132,
+"type": 3
+},
+{
+"id": 133,
+"type": 3,
+"trgs": [
+139
+]
+},
+{
+"id": 134,
+"type": 3
+}
+],
+"puzzle": "#Get_letter"
+},
+{
+"type": 781,
+"id": 135,
+"x": 171,
+"y": 224,
+"plugs": [
+{
+"id": 136,
+"type": 2
+},
+{
+"id": 137,
+"type": 3
+}
+],
+"dialog": "D_SOLO",
+"sentence": "7",
+"sentence2": "7"
+},
+{
+"type": 781,
+"id": 138,
+"x": 170,
+"y": 367,
+"plugs": [
+{
+"id": 139,
+"type": 2
+},
+{
+"id": 140,
+"type": 3
+}
+],
+"dialog": "D_SOLO",
+"sentence": "5",
+"sentence2": "5"
+},
+{
+"type": 1287,
+"id": 141,
+"x": -762,
+"y": 148,
+"plugs": [
+{
+"id": 142,
+"type": 3
+}
+],
+"varCmp": "==",
+"scene": "S_LIVINGROOM",
+"obj": "O_SEBASTIEN_LAGRANGE"
 }
 ]
 }
@@ -1165,14 +1199,14 @@
 "graph": {
 "board": {
 "nextid": 97,
-"x": 300,
-"y": 189,
+"x": 480,
+"y": 414,
 "boxes": [
 {
 "type": 257,
 "id": 1,
-"x": -301,
-"y": 89,
+"x": -479,
+"y": -147,
 "plugs": [
 {
 "id": 2,
@@ -1186,8 +1220,8 @@
 {
 "type": 1283,
 "id": 3,
-"x": -300,
-"y": -176,
+"x": -478,
+"y": -412,
 "plugs": [
 {
 "id": 4,
@@ -1205,8 +1239,8 @@
 {
 "type": 775,
 "id": 5,
-"x": -84,
-"y": -176,
+"x": -262,
+"y": -412,
 "plugs": [
 {
 "id": 6,
@@ -1225,8 +1259,8 @@
 {
 "type": 1287,
 "id": 8,
-"x": -299,
-"y": -81,
+"x": -477,
+"y": -317,
 "plugs": [
 {
 "id": 9,
@@ -1243,8 +1277,8 @@
 {
 "type": 788,
 "id": 10,
-"x": -155,
-"y": -81,
+"x": -333,
+"y": -317,
 "plugs": [
 {
 "id": 11,
@@ -1265,8 +1299,8 @@
 {
 "type": 780,
 "id": 13,
-"x": -26,
-"y": -81,
+"x": -204,
+"y": -317,
 "plugs": [
 {
 "id": 14,
@@ -1285,8 +1319,8 @@
 {
 "type": 781,
 "id": 16,
-"x": 118,
-"y": -81,
+"x": -60,
+"y": -317,
 "plugs": [
 {
 "id": 17,
@@ -1304,8 +1338,8 @@
 {
 "type": 1034,
 "id": 43,
-"x": -197,
-"y": 89,
+"x": -375,
+"y": -147,
 "plugs": [
 {
 "id": 44,
@@ -1329,8 +1363,8 @@
 {
 "type": 786,
 "id": 79,
-"x": -63,
-"y": 89,
+"x": -241,
+"y": -147,
 "plugs": [
 {
 "id": 80,
@@ -1452,7 +1486,7 @@
 "uid": "R_THEATRE",
 "graph": {
 "board": {
-"nextid": 13,
+"nextid": 48,
 "x": 28,
 "boxes": [
 {
@@ -1463,7 +1497,10 @@
 "plugs": [
 {
 "id": 2,
-"type": 3
+"type": 3,
+"trgs": [
+14
+]
 }
 ]
 },
@@ -1543,6 +1580,83 @@
 "dialog": "D_SOLO",
 "sentence": "1",
 "sentence2": "1"
+},
+{
+"type": 513,
+"id": 13,
+"x": 92,
+"y": 1,
+"plugs": [
+{
+"id": 14,
+"type": 2
+},
+{
+"id": 15,
+"type": 3
+}
+],
+"script": "if resolved #Get_acid\r\n\tif resolved #Get_bauxite\r\n\t\tif resolved #Get_copper_wire\r\n\t\t\tshow O_OLGA_PETROV\r\n\t\tend\r\n\tend\r\nelse\r\n\thide O_OLGA_PETROV\r\nend",
+"plugCount": 1
+},
+{
+"type": 1287,
+"id": 40,
+"x": -27,
+"y": 385,
+"plugs": [
+{
+"id": 41,
+"type": 3,
+"trgs": [
+43
+]
+}
+],
+"varCmp": "==",
+"scene": "S_THEATRE",
+"obj": "O_OLGA_PETROV"
+},
+{
+"type": 781,
+"id": 42,
+"x": 132,
+"y": 385,
+"plugs": [
+{
+"id": 43,
+"type": 2
+},
+{
+"id": 44,
+"type": 3,
+"trgs": [
+46
+]
+}
+],
+"dialog": "D_OLGA",
+"sentence": "1",
+"sentence2": "5"
+},
+{
+"type": 788,
+"id": 45,
+"x": 368,
+"y": 385,
+"plugs": [
+{
+"id": 46,
+"type": 2
+},
+{
+"id": 47,
+"type": 3
+}
+],
+"player": "P_HERO",
+"obj": "O_LETTER",
+"silent": "False"
 }
 ]
 }
@@ -1617,7 +1731,9 @@
 "uid": "R_LABORATORY",
 "graph": {
 "board": {
-"nextid": 61,
+"nextid": 104,
+"x": 370,
+"y": -694,
 "boxes": [
 {
 "type": 257,
@@ -1852,6 +1968,227 @@
 ],
 "dialog": "D_PAFF",
 "sentence": "22"
+},
+{
+"type": 1287,
+"id": 61,
+"x": 16,
+"y": 836,
+"plugs": [
+{
+"id": 62,
+"type": 3,
+"trgs": [
+64
+]
+}
+],
+"varCmp": "==",
+"scene": "S_LABORATORY",
+"obj": "O_PUFF_PUNK_STONE"
+},
+{
+"type": 1031,
+"id": 63,
+"x": 193,
+"y": 836,
+"plugs": [
+{
+"id": 64,
+"type": 2
+},
+{
+"id": 65,
+"type": 3,
+"trgs": [
+70
+]
+},
+{
+"id": 66,
+"type": 3,
+"trgs": [
+73
+]
+},
+{
+"id": 67,
+"type": 3
+},
+{
+"id": 68,
+"type": 3
+}
+],
+"puzzle": "#Get_bauxite"
+},
+{
+"type": 781,
+"id": 69,
+"x": 344,
+"y": 836,
+"plugs": [
+{
+"id": 70,
+"type": 2
+},
+{
+"id": 71,
+"type": 3
+}
+],
+"dialog": "D_PUFF",
+"sentence": "20"
+},
+{
+"type": 1035,
+"id": 72,
+"x": 329,
+"y": 920,
+"plugs": [
+{
+"id": 73,
+"type": 2
+},
+{
+"id": 74,
+"type": 3,
+"trgs": [
+87
+]
+},
+{
+"id": 75,
+"type": 3,
+"trgs": [
+81
+]
+}
+],
+"dialog": "D_PUFF",
+"said": "10"
+},
+{
+"type": 781,
+"id": 80,
+"x": 456,
+"y": 1151,
+"plugs": [
+{
+"id": 81,
+"type": 2
+},
+{
+"id": 82,
+"type": 3
+}
+],
+"dialog": "D_PUFF",
+"sentence": "1",
+"sentence2": "10"
+},
+{
+"type": 1035,
+"id": 86,
+"x": 451,
+"y": 920,
+"plugs": [
+{
+"id": 87,
+"type": 2
+},
+{
+"id": 88,
+"type": 3,
+"trgs": [
+94
+]
+},
+{
+"id": 89,
+"type": 3,
+"trgs": [
+100
+]
+}
+],
+"dialog": "D_PUFF",
+"said": "17"
+},
+{
+"type": 781,
+"id": 90,
+"x": 763,
+"y": 996,
+"plugs": [
+{
+"id": 91,
+"type": 2
+},
+{
+"id": 92,
+"type": 3
+}
+],
+"dialog": "D_PUFF",
+"sentence": "11",
+"sentence2": "17"
+},
+{
+"type": 780,
+"id": 93,
+"x": 578,
+"y": 920,
+"plugs": [
+{
+"id": 94,
+"type": 2
+},
+{
+"id": 95,
+"type": 3
+}
+],
+"puzzle": "#Get_bauxite"
+},
+{
+"type": 773,
+"id": 99,
+"x": 575,
+"y": 996,
+"plugs": [
+{
+"id": 100,
+"type": 2
+},
+{
+"id": 101,
+"type": 3,
+"trgs": [
+91
+]
+}
+],
+"obj": "O_EXAMINE_STONE",
+"anim": "STOP",
+"dir": "RIGHT",
+"scale": "75",
+"opacity": "100"
+},
+{
+"type": 1287,
+"id": 102,
+"x": 38,
+"y": 1402,
+"plugs": [
+{
+"id": 103,
+"type": 3
+}
+],
+"varCmp": "==",
+"scene": "S_LABORATORY",
+"obj": "O_POOF_PUNK_POISON"
 }
 ]
 }
@@ -1862,9 +2199,9 @@
 "uid": "R_PUZZLE_ELEC",
 "graph": {
 "board": {
-"nextid": 274,
-"x": 26,
-"y": -73,
+"nextid": 543,
+"x": 344,
+"y": -134,
 "boxes": [
 {
 "type": 1287,
@@ -2139,8 +2476,8 @@
 {
 "type": 1029,
 "id": 103,
-"x": 323,
-"y": 671,
+"x": 336,
+"y": 798,
 "plugs": [
 {
 "id": 104,
@@ -2150,12 +2487,15 @@
 "id": 105,
 "type": 3,
 "trgs": [
-116
+330
 ]
 },
 {
 "id": 106,
-"type": 3
+"type": 3,
+"trgs": [
+378
+]
 }
 ],
 "scene": "S_PUZZLE_ELEC",
@@ -2166,8 +2506,8 @@
 {
 "type": 1029,
 "id": 107,
-"x": 320,
-"y": 833,
+"x": 333,
+"y": 960,
 "plugs": [
 {
 "id": 108,
@@ -2177,12 +2517,15 @@
 "id": 109,
 "type": 3,
 "trgs": [
-116
+330
 ]
 },
 {
 "id": 110,
-"type": 3
+"type": 3,
+"trgs": [
+378
+]
 }
 ],
 "scene": "S_PUZZLE_ELEC",
@@ -2193,8 +2536,8 @@
 {
 "type": 1029,
 "id": 111,
-"x": 319,
-"y": 1000,
+"x": 332,
+"y": 1127,
 "plugs": [
 {
 "id": 112,
@@ -2204,12 +2547,15 @@
 "id": 113,
 "type": 3,
 "trgs": [
-116
+330
 ]
 },
 {
 "id": 114,
-"type": 3
+"type": 3,
+"trgs": [
+378
+]
 }
 ],
 "scene": "S_PUZZLE_ELEC",
@@ -2219,72 +2565,10 @@
 },
 {
 "type": 513,
-"id": 115,
-"comment": "Puzzle is solved",
-"x": 625,
-"y": 833,
-"plugs": [
-{
-"id": 116,
-"type": 2
-},
-{
-"id": 117,
-"type": 3
-}
-],
-"script": "set PUZZLE_SOLVED 1",
-"plugCount": 1
-},
-{
-"type": 786,
-"id": 145,
-"x": 1106,
-"y": 292,
-"plugs": [
-{
-"id": 146,
-"type": 2
-},
-{
-"id": 147,
-"type": 3,
-"trgs": [
-178
-]
-}
-],
-"visible": "False",
-"duration": "0",
-"scene": "S_PUZZLE_ELEC",
-"obj": "O_PELEC_OFF"
-},
-{
-"type": 786,
-"id": 148,
-"x": 1219,
-"y": 314,
-"plugs": [
-{
-"id": 149,
-"type": 2
-},
-{
-"id": 150,
-"type": 3
-}
-],
-"visible": "False",
-"duration": "0",
-"scene": "S_PUZZLE_ELEC",
-"obj": "O_PELEC_ON"
-},
-{
-"type": 513,
 "id": 151,
 "comment": "Puzzle is not solved",
-"x": 149,
-"y": 672,
+"x": 162,
+"y": 799,
 "plugs": [
 {
 "id": 152,
@@ -2302,51 +2586,11 @@
 "plugCount": 1
 },
 {
-"type": 775,
-"id": 174,
-"x": 1463,
-"y": 232,
-"plugs": [
-{
-"id": 175,
-"type": 2
-},
-{
-"id": 176,
-"type": 3
-}
-],
-"scene": "S_LABORATORY",
-"durationOut": "400",
-"durationWait": "0",
-"durationIn": "0"
-},
-{
-"type": 780,
-"id": 177,
-"x": 1272,
-"y": 232,
-"plugs": [
-{
-"id": 178,
-"type": 2
-},
-{
-"id": 179,
-"type": 3,
-"trgs": [
-175
-]
-}
-],
-"puzzle": "#Get_copper_wire"
-},
-{
 "type": 513,
 "id": 182,
 "comment": "Puzzle is not solved",
-"x": 147,
-"y": 833,
+"x": 160,
+"y": 960,
 "plugs": [
 {
 "id": 183,
@@ -2367,8 +2611,8 @@
 "type": 513,
 "id": 196,
 "comment": "Puzzle is not solved",
-"x": 149,
-"y": 1000,
+"x": 162,
+"y": 1127,
 "plugs": [
 {
 "id": 197,
@@ -2388,8 +2632,8 @@
 {
 "type": 261,
 "id": 244,
-"x": -11,
-"y": 999,
+"x": 2,
+"y": 1126,
 "plugs": [
 {
 "id": 245,
@@ -2404,8 +2648,8 @@
 {
 "type": 261,
 "id": 246,
-"x": -4,
-"y": 834,
+"x": 9,
+"y": 961,
 "plugs": [
 {
 "id": 247,
@@ -2420,8 +2664,8 @@
 {
 "type": 261,
 "id": 248,
-"x": 5,
-"y": 673,
+"x": 18,
+"y": 800,
 "plugs": [
 {
 "id": 249,
@@ -2433,85 +2677,11 @@
 ]
 },
 {
-"type": 1028,
-"id": 250,
-"x": 904,
-"y": 272,
-"plugs": [
-{
-"id": 251,
-"type": 2
-},
-{
-"id": 252,
-"type": 3,
-"trgs": [
-149
-]
-},
-{
-"id": 253,
-"type": 3,
-"trgs": [
-146
-]
-},
-{
-"id": 254,
-"type": 3
-},
-{
-"id": 255,
-"type": 3
-},
-{
-"id": 256,
-"type": 3,
-"trgs": [
-149
-]
-}
-],
-"values": [
-"0",
-"1",
-"2",
-"3"
-],
-"variable": "$PUZZLE_SOLVED"
-},
-{
-"type": 261,
-"id": 269,
-"x": 687,
-"y": 271,
-"plugs": [
-{
-"id": 270,
-"type": 3,
-"trgs": [
-251
-]
-}
-],
-"order": 3
-},
-{
-"type": 256,
-"id": 271,
-"resize": true,
-"width": 920,
-"height": 298,
-"x": 675,
-"y": 152,
-"name": "Checking solving status"
-},
-{
 "type": 256,
 "id": 272,
 "resize": true,
 "width": 650,
-"height": 449,
+"height": 595,
 "x": -13,
 "y": 133,
 "name": "Interacting with levers"
@@ -2520,11 +2690,205 @@
 "type": 256,
 "id": 273,
 "resize": true,
-"width": 772,
-"height": 497,
-"x": -24,
-"y": 636,
+"width": 969,
+"height": 500,
+"x": -11,
+"y": 763,
 "name": "Update loop to check status"
+},
+{
+"type": 513,
+"id": 329,
+"comment": "Resulting",
+"x": 582,
+"y": 960,
+"plugs": [
+{
+"id": 330,
+"type": 2
+},
+{
+"id": 331,
+"type": 3,
+"trgs": [
+393
+]
+}
+],
+"script": "show O_PELEC_ON\r\nhide O_PELEC_OFF\r\nsuccess #Get_copper_wire",
+"plugCount": 1
+},
+{
+"type": 260,
+"id": 377,
+"x": 586,
+"y": 1078,
+"plugs": [
+{
+"id": 378,
+"type": 2
+},
+{
+"id": 379,
+"type": 3,
+"trgs": [
+381
+]
+}
+]
+},
+{
+"type": 513,
+"id": 380,
+"x": 719,
+"y": 1079,
+"plugs": [
+{
+"id": 381,
+"type": 2
+},
+{
+"id": 382,
+"type": 3
+}
+],
+"script": "hide O_PELEC_ON\r\nshow O_PELEC_OFF",
+"plugCount": 1
+},
+{
+"type": 1029,
+"id": 392,
+"x": 710,
+"y": 797,
+"plugs": [
+{
+"id": 393,
+"type": 2
+},
+{
+"id": 394,
+"type": 3,
+"trgs": [
+397
+]
+},
+{
+"id": 395,
+"type": 3
+}
+],
+"scene": "S_PUZZLE_ELEC",
+"obj": "O_PELEC_LEVER",
+"anim": "STOP",
+"dir": "LEFT"
+},
+{
+"type": 513,
+"id": 396,
+"x": 869,
+"y": 797,
+"plugs": [
+{
+"id": 397,
+"type": 2
+},
+{
+"id": 398,
+"type": 3
+}
+],
+"script": "jump S_LABORATORY 400",
+"plugCount": 1
+},
+{
+"type": 1287,
+"id": 423,
+"x": 4,
+"y": 592,
+"plugs": [
+{
+"id": 424,
+"type": 3,
+"trgs": [
+429
+]
+}
+],
+"varCmp": "==",
+"scene": "S_PUZZLE_ELEC",
+"obj": "O_PELEC_LEVER"
+},
+{
+"type": 769,
+"id": 425,
+"x": 355,
+"y": 593,
+"plugs": [
+{
+"id": 426,
+"type": 2
+},
+{
+"id": 427,
+"type": 3
+}
+],
+"scene": "S_PUZZLE_ELEC",
+"obj": "O_PELEC_LEVER",
+"anim": "STOP",
+"dir": "LEFT",
+"reverse": "False"
+},
+{
+"type": 1029,
+"id": 428,
+"x": 182,
+"y": 592,
+"plugs": [
+{
+"id": 429,
+"type": 2
+},
+{
+"id": 430,
+"type": 3,
+"trgs": [
+426
+]
+},
+{
+"id": 431,
+"type": 3,
+"trgs": [
+433
+]
+}
+],
+"scene": "S_PUZZLE_ELEC",
+"obj": "O_PELEC_LEVER",
+"anim": "STOP",
+"dir": "RIGHT"
+},
+{
+"type": 769,
+"id": 432,
+"x": 491,
+"y": 613,
+"plugs": [
+{
+"id": 433,
+"type": 2
+},
+{
+"id": 434,
+"type": 3
+}
+],
+"scene": "S_PUZZLE_ELEC",
+"obj": "O_PELEC_LEVER",
+"anim": "STOP",
+"dir": "RIGHT",
+"reverse": "False"
 }
 ]
 }
@@ -2750,9 +3114,9 @@
 "",
 ""
 ],
-"x": 959,
-"y": 540,
-"width": 1922,
+"x": 964,
+"y": 541,
+"width": 1924,
 "height": 100
 },
 {
@@ -2764,9 +3128,9 @@
 "",
 ""
 ],
-"x": 960,
+"x": 964,
 "y": 541,
-"width": 1919,
+"width": 1924,
 "height": 100
 },
 {
@@ -2779,8 +3143,8 @@
 ""
 ],
 "x": 964,
-"y": 540,
-"width": 1921,
+"y": 541,
+"width": 1924,
 "height": 100
 },
 {
@@ -2939,7 +3303,7 @@
 "scripts": [
 {
 "time": 29,
-"script": "jump S_LIVINGROOM"
+"script": "jump S_DORMS 400"
 }
 ]
 }
@@ -3018,8 +3382,8 @@
 "opacitySpeed": 100
 }
 },
-"zoom": 48,
-"nextID": 11,
+"zoom": 55,
+"nextID": 12,
 "role": "R_LIVINGROOM",
 "x": -188,
 "y": -1201
@@ -7749,14 +8113,7 @@
 },
 {
 "col": 79,
-"row": 44,
-"linkEnter": {
-"pos": "FROM",
-"scene1": "S_CABIN"
-},
-"linkSelObj": {
-"puzzle": "#Access_cabin"
-}
+"row": 44
 },
 {
 "col": 79,
@@ -10200,7 +10557,11 @@
 },
 {
 "col": 79,
-"row": 42
+"row": 42,
+"linkEnter": {
+"pos": "FROM",
+"scene1": "S_CABIN"
+}
 },
 {
 "col": 78,
@@ -10748,6 +11109,54 @@
 {},
 {}
 ]
+},
+{
+"uid": "O_SEBASTIEN_LAGRANGE",
+"depths": [
+{
+"a": 48,
+"b": 100
+},
+{
+"y": 1072,
+"a": 48,
+"b": 100
+}
+],
+"id": 11,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 1430,
+"y": 825,
+"parallax": 100,
+"lightAmbient": 255,
+"lightDiffuse": 16777215,
+"lightAngle": 30,
+"lightDist": -1,
+"grids": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+],
+"paths": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+]
 }
 ],
 "doors": [
@@ -10928,7 +11337,7 @@
 "opacitySpeed": 100
 }
 },
-"zoom": 63,
+"zoom": 48,
 "nextID": 6,
 "role": "R_LABORATORY"
 },
@@ -16755,7 +17164,7 @@
 }
 },
 "zoom": 48,
-"nextID": 4,
+"nextID": 5,
 "role": "R_THEATRE"
 },
 "sid": 24,
@@ -18592,6 +19001,54 @@
 }
 ]
 },
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+],
+"paths": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+]
+},
+{
+"uid": "O_OLGA_PETROV",
+"depths": [
+{
+"a": 60,
+"b": 100
+},
+{
+"y": 1072,
+"a": 60,
+"b": 100
+}
+],
+"id": 4,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 722,
+"y": 794,
+"parallax": 100,
+"lightAmbient": 255,
+"lightDiffuse": 16777215,
+"lightAngle": 30,
+"lightDist": -1,
+"grids": [
+{},
 {},
 {},
 {},
@@ -32716,7 +33173,10 @@
 "width": 155,
 "height": 483,
 "x": 83,
-"y": 478
+"y": 478,
+"title": {
+"en": "Olga Petrov"
+}
 },
 "anims": [
 {
@@ -32841,6 +33301,70 @@
 }
 ],
 "profile": "Neutral"
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
 }
 ],
 "sid": 18,
@@ -32918,6 +33442,70 @@
 "name": "BR"
 }
 ]
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
 }
 ],
 "sid": 41,
@@ -32943,10 +33531,13 @@
 "object": {
 "bbox": true,
 "maxScale": -1,
-"width": 64,
-"height": 45,
+"width": 55,
+"height": 53,
 "x": 36,
-"y": 24
+"y": 24,
+"title": {
+"en": "Bauxite"
+}
 },
 "anims": [
 {
@@ -32962,16 +33553,80 @@
 "name": "RIGHT",
 "frames": [
 {
-"md5": "a6667dd86e3b405f49bf56b277eae9e7",
-"wtrim": 64,
-"htrim": 46,
+"md5": "3839aa9e1e156c0074084d6a3e969e8a",
+"wtrim": 56,
+"htrim": 54,
 "xdraw": -2,
 "ydraw": -2,
-"wdraw": 68,
-"hdraw": 50
+"wdraw": 60,
+"hdraw": 58
 }
 ],
 "count": 1
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
 },
 {
 "name": "FRONT"
@@ -33002,8 +33657,8 @@
 "index2": -1,
 "x": 2,
 "y": 2,
-"w": 64,
-"h": 46
+"w": 56,
+"h": 54
 }
 ],
 "packs": [
@@ -33020,7 +33675,10 @@
 "width": 64,
 "height": 64,
 "x": 29,
-"y": 30
+"y": 30,
+"title": {
+"en": "Lettre"
+}
 },
 "anims": [
 {
@@ -33048,6 +33706,70 @@
 }
 ],
 "count": 1
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
 },
 {
 "name": "FRONT"
@@ -33096,7 +33818,10 @@
 "width": 146,
 "height": 177,
 "x": 83,
-"y": 87
+"y": 87,
+"title": {
+"en": "Julia Cop"
+}
 },
 "anims": [
 {
@@ -33122,6 +33847,70 @@
 }
 ],
 "count": 1
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
 },
 {
 "name": "FRONT"
@@ -33170,7 +33959,10 @@
 "width": 239,
 "height": 394,
 "x": 107,
-"y": 192
+"y": 192,
+"title": {
+"en": "Walter Cop"
+}
 },
 "anims": [
 {
@@ -33196,6 +33988,70 @@
 }
 ],
 "count": 1
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
 },
 {
 "name": "FRONT"
@@ -33243,7 +34099,10 @@
 "width": 129,
 "height": 350,
 "x": 67,
-"y": 347
+"y": 347,
+"title": {
+"en": "Paff Punk"
+}
 },
 "anims": [
 {
@@ -33269,70 +34128,6 @@
 }
 ],
 "count": 1
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "TALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "WALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
 },
 {
 "name": "FRONT"
@@ -33380,7 +34175,10 @@
 "width": 121,
 "height": 350,
 "x": 60,
-"y": 347
+"y": 347,
+"title": {
+"en": "Puff Punk"
+}
 },
 "anims": [
 {
@@ -33406,70 +34204,6 @@
 }
 ],
 "count": 1
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "TALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "WALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
 },
 {
 "name": "FRONT"
@@ -33517,7 +34251,10 @@
 "width": 117,
 "height": 350,
 "x": 56,
-"y": 347
+"y": 347,
+"title": {
+"en": "Poof Punk"
+}
 },
 "anims": [
 {
@@ -33543,70 +34280,6 @@
 }
 ],
 "count": 1
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "TALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "WALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
 },
 {
 "name": "FRONT"
@@ -33665,7 +34338,19 @@
 "loopRangeMax": -1,
 "dirs": [
 {
-"name": "LEFT"
+"name": "LEFT",
+"frames": [
+{
+"md5": "ebd86ea7eddc9f4263b25fee09115609",
+"wtrim": 294,
+"htrim": 490,
+"xdraw": -2,
+"ydraw": -2,
+"wdraw": 298,
+"hdraw": 494
+}
+],
+"count": 1
 },
 {
 "name": "RIGHT",
@@ -33701,70 +34386,6 @@
 "name": "BR"
 }
 ]
-},
-{
-"name": "TALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "WALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
 }
 ],
 "sid": 56,
@@ -33777,9 +34398,21 @@
 "y": 2,
 "w": 294,
 "h": 490
+},
+{
+"pack": 1,
+"index": 1,
+"index2": -1,
+"x": 2,
+"y": 2,
+"w": 294,
+"h": 490
 }
 ],
 "packs": [
+{
+"count": 1
+},
 {
 "count": 1
 }
@@ -33829,70 +34462,6 @@
 }
 ],
 "count": 1
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "TALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "WALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
 },
 {
 "name": "FRONT"
@@ -33993,70 +34562,6 @@
 "name": "BR"
 }
 ]
-},
-{
-"name": "TALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "WALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
 }
 ],
 "sid": 58,
@@ -34109,70 +34614,6 @@
 }
 ],
 "count": 1
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "TALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "WALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
 },
 {
 "name": "FRONT"
@@ -34257,70 +34698,6 @@
 }
 ],
 "count": 1
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "TALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "WALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
 },
 {
 "name": "FRONT"
@@ -34433,70 +34810,6 @@
 "name": "BR"
 }
 ]
-},
-{
-"name": "TALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "WALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
 }
 ],
 "sid": 62,
@@ -34533,7 +34846,10 @@
 "width": 64,
 "height": 64,
 "x": 34,
-"y": 33
+"y": 33,
+"title": {
+"en": "Fil de cuivre"
+}
 },
 "anims": [
 {
@@ -34559,70 +34875,6 @@
 }
 ],
 "count": 1
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "TALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
-},
-{
-"name": "FRONT"
-},
-{
-"name": "BACK"
-},
-{
-"name": "FL"
-},
-{
-"name": "FR"
-},
-{
-"name": "BL"
-},
-{
-"name": "BR"
-}
-]
-},
-{
-"name": "WALK",
-"fps": 6,
-"action": -1,
-"loopRangeMax": -1,
-"dirs": [
-{
-"name": "LEFT"
-},
-{
-"name": "RIGHT"
 },
 {
 "name": "FRONT"
@@ -34671,7 +34923,10 @@
 "width": 46,
 "height": 64,
 "x": 24,
-"y": 37
+"y": 37,
+"title": {
+"en": "Acide"
+}
 },
 "anims": [
 {
@@ -34694,6 +34949,80 @@
 "ydraw": -2,
 "wdraw": 50,
 "hdraw": 68
+}
+],
+"count": 1
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+}
+],
+"sid": 65,
+"uid": "O_POISON_LIQUID",
+"packset": {
+"frames": [
+{
+"index2": -1,
+"x": 2,
+"y": 2,
+"w": 46,
+"h": 64
+}
+],
+"packs": [
+{
+"count": 1
+}
+]
+}
+},
+{
+"object": {
+"bbox": true,
+"maxScale": -1,
+"width": 796,
+"height": 457,
+"x": 469,
+"y": 454
+},
+"anims": [
+{
+"name": "STOP",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT",
+"frames": [
+{
+"md5": "6f651f06a99495657ca8c56c12d8037f",
+"wtrim": 796,
+"htrim": 458,
+"xdraw": -2,
+"ydraw": -2,
+"wdraw": 800,
+"hdraw": 462
 }
 ],
 "count": 1
@@ -34783,16 +35112,290 @@
 ]
 }
 ],
-"sid": 65,
-"uid": "O_POISON_LIQUID",
+"sid": 66,
+"uid": "O_EXAMINE_STONE",
 "packset": {
 "frames": [
 {
 "index2": -1,
 "x": 2,
 "y": 2,
-"w": 46,
-"h": 64
+"w": 796,
+"h": 458
+}
+],
+"packs": [
+{
+"count": 1
+}
+]
+}
+},
+{
+"object": {
+"bbox": true,
+"maxScale": -1,
+"width": 1024,
+"height": 1021
+},
+"anims": [
+{
+"name": "STOP",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT",
+"frames": [
+{
+"md5": "a8ad94a4d3aefca9e00a07c0da5b7e83",
+"wtrim": 1024,
+"htrim": 1022,
+"xdraw": -2,
+"ydraw": -2,
+"wdraw": 1028,
+"hdraw": 1026
+}
+],
+"count": 1
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+}
+],
+"sid": 67,
+"uid": "O_CARD_PACK",
+"packset": {
+"frames": [
+{
+"index2": -1,
+"x": 2,
+"y": 2,
+"w": 1024,
+"h": 1022
+}
+],
+"packs": [
+{
+"count": 1
+}
+]
+}
+},
+{
+"object": {
+"bbox": true,
+"maxScale": -1,
+"width": 308,
+"height": 576,
+"x": 167,
+"y": 573
+},
+"anims": [
+{
+"name": "STOP",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT",
+"frames": [
+{
+"md5": "2ef36e163d05ee74b9624644f668259d",
+"wtrim": 308,
+"htrim": 576,
+"xdraw": -2,
+"ydraw": -2,
+"wdraw": 312,
+"hdraw": 580
+}
+],
+"count": 1
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+}
+],
+"sid": 68,
+"uid": "O_SEBASTIEN_LAGRANGE",
+"packset": {
+"frames": [
+{
+"index2": -1,
+"x": 2,
+"y": 2,
+"w": 308,
+"h": 576
 }
 ],
 "packs": [
@@ -34815,7 +35418,7 @@
 }
 ],
 "meta": {
-"nextAssetID": 66
+"nextAssetID": 69
 },
 "dialogs": [
 {
@@ -34940,7 +35543,162 @@
 "sid": 32,
 "uid": "D_PUFF",
 "dialog": {
-"nextID": 1
+"nextID": 21,
+"sentence": {
+"sentences": [
+{
+"id": 1,
+"text": {
+"en": "Ah mes pierres! Quelles belles pierres!"
+},
+"sentences": [
+{
+"id": 2,
+"text": {
+"en": "Hm ? Qui est-tu ?"
+},
+"sentences": [
+{
+"id": 4,
+"choice": true,
+"text": {
+"en": "Le nouvel astronaute de l'équipage, j'ai besoin de bauxite."
+},
+"sentences": [
+{
+"id": 5,
+"sentences": [
+{
+"id": 6,
+"sentences": [
+{
+"id": 7,
+"sentences": [
+{
+"id": 8,
+"choice": true,
+"sentences": [
+{
+"id": 9,
+"sentences": [
+{
+"id": 10,
+"text": {
+"en": "Examine cette pierre que j'ai avec moi."
+},
+"speaker": "O_PUFF_PUNK_STONE"
+}
+],
+"text": {
+"en": "Ah ça te surprend hein ?\r\nC'est vraiment complexe comme tâche."
+},
+"speaker": "O_PUFF_PUNK_STONE"
+}
+],
+"text": {
+"en": "...quoi ?"
+}
+}
+],
+"text": {
+"en": "Regarder une pierre!"
+},
+"speaker": "O_PUFF_PUNK_STONE"
+}
+],
+"text": {
+"en": "Pour ça il te faudra..."
+},
+"tags": [
+"",
+"",
+"",
+""
+],
+"speaker": "O_PUFF_PUNK_STONE"
+}
+],
+"text": {
+"en": "Bauxite ? C'est une belle pierre, je ne t'en confierai pas si facilement."
+},
+"speaker": "O_PUFF_PUNK_STONE"
+}
+]
+}
+],
+"speaker": "O_PUFF_PUNK_STONE"
+}
+],
+"speaker": "O_PUFF_PUNK_STONE"
+},
+{
+"id": 11,
+"sentences": [
+{
+"id": 12,
+"sentences": [
+{
+"id": 13,
+"choice": true,
+"sentences": [
+{
+"id": 17,
+"sentences": [
+{
+"id": 18,
+"text": {
+"en": "Ah quel talent! Tiens, ma sublime bauxite t'appartient."
+},
+"speaker": "O_PUFF_PUNK_STONE"
+}
+],
+"text": {
+"en": "Exactement! Tu est un être exceptionnel, digne des plus grands géologues."
+},
+"speaker": "O_PUFF_PUNK_STONE"
+}
+],
+"text": {
+"en": "1"
+}
+},
+{
+"id": 14,
+"choice": true,
+"sentences": [
+{
+"id": 19,
+"text": {
+"en": "Pathétique."
+},
+"speaker": "O_PUFF_PUNK_STONE"
+}
+],
+"text": {
+"en": "2"
+}
+}
+],
+"text": {
+"en": "Combien de failles y avait-t-il dans cette magnifique pierre ?"
+},
+"speaker": "O_PUFF_PUNK_STONE"
+}
+],
+"text": {
+"en": "Alors, on va voir si tu es digne d'être un géologue."
+},
+"speaker": "O_PUFF_PUNK_STONE"
+},
+{
+"id": 20,
+"text": {
+"en": "Quel talentueux géologue!"
+},
+"speaker": "O_PUFF_PUNK_STONE"
+}
+]
+}
 }
 },
 {
@@ -35092,7 +35850,54 @@
 "sid": 35,
 "uid": "D_OLGA",
 "dialog": {
-"nextID": 1
+"nextID": 10,
+"sentence": {
+"sentences": [
+{
+"id": 1,
+"text": {
+"en": "Alors tu as écouté ma requête..."
+},
+"sentences": [
+{
+"id": 2,
+"text": {
+"en": "Bon travail, je n'en attendais pas moins de toi."
+},
+"sentences": [
+{
+"id": 3,
+"text": {
+"en": "Veux-tu donner cette lettre au capitaine ? Il saura quoi en faire."
+},
+"sentences": [
+{
+"id": 4,
+"text": {
+"en": "Je te donne accès à la cabine de pilotage."
+},
+"sentences": [
+{
+"id": 5,
+"text": {
+"en": "Merci."
+},
+"speaker": "O_PERSO"
+}
+],
+"speaker": "O_OLGA_PETROV"
+}
+],
+"speaker": "O_OLGA_PETROV"
+}
+],
+"speaker": "O_OLGA_PETROV"
+}
+],
+"speaker": "O_OLGA_PETROV"
+}
+]
+}
 }
 },
 {
@@ -35120,7 +35925,79 @@
 "sid": 39,
 "uid": "D_SEBASTIEN_LAGRANGE",
 "dialog": {
-"nextID": 1
+"nextID": 9,
+"sentence": {
+"sentences": [
+{
+"id": 1,
+"text": {
+"en": "Mr. Lagrange, le superbe magicien, c'est un honneur de vous rencontrer."
+},
+"sentences": [
+{
+"id": 2,
+"text": {
+"en": "Moi de même, soldat de l'espace!"
+},
+"sentences": [
+{
+"id": 3,
+"text": {
+"en": "Vous pouvez m'apprendre un tour de magie ?"
+},
+"sentences": [
+{
+"id": 4,
+"text": {
+"en": "Ah tu sais un magicien ne dévoile jamais ses secrets, tout est magique!"
+},
+"speaker": "O_SEBASTIEN_LAGRANGE"
+}
+],
+"speaker": "O_PERSO"
+}
+],
+"speaker": "O_SEBASTIEN_LAGRANGE"
+}
+],
+"speaker": "O_PERSO"
+},
+{
+"id": 5,
+"text": {
+"en": "Soldat de l'espace, j'ai vu Olga. Elle m'a parlé de toi."
+},
+"sentences": [
+{
+"id": 6,
+"text": {
+"en": "Tu semble être quelqu'un de doué et de compétent."
+},
+"sentences": [
+{
+"id": 7,
+"text": {
+"en": "Je vais t'apprendre un tour de cartes, tu deviendras magicien à ton tour!"
+},
+"sentences": [
+{
+"id": 8,
+"text": {
+"en": "Bien sûr! Merci beaucoup!"
+},
+"speaker": "O_PERSO"
+}
+],
+"speaker": "O_SEBASTIEN_LAGRANGE"
+}
+],
+"speaker": "O_SEBASTIEN_LAGRANGE"
+}
+],
+"speaker": "O_SEBASTIEN_LAGRANGE"
+}
+]
+}
 }
 },
 {
@@ -35156,10 +36033,17 @@
 "en": "Je n'ai pas le droit de m'y rendre, c'est reservé aux pilotes."
 },
 "speaker": "O_PERSO"
+},
+{
+"id": 7,
+"text": {
+"en": "Ce n'est pas encore le moment, j'en suis persuadé."
+},
+"speaker": "O_PERSO"
 }
 ]
 },
-"nextID": 7
+"nextID": 8
 }
 }
 ]
